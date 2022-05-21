@@ -1,0 +1,8 @@
+<div class="p-3">
+    <ul class="list-group">
+        <li (click)="colorResetter()" [class]="setColorFunc()" routerLink="/cars">All Colors</li>
+        <li (click)="setCurrentBrand(color)" routerLink="/cars/color/{{color.id}}" [class]="checkIfCurrentColor(color)"
+            *ngFor="let color of colors">
+            {{color.colorName}}</li>
+    </ul>
+</div>
